@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Comité Académico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Comité Académico</h1>
+  </header>
+
+  <div class="container">
+  
+    <nav class="sidebar">
+      <ul>
+        <li><button onclick="mostrarSeccion('nuevoRegistroSection')">Nuevo Registro</button></li>
+        <li><button onclick="mostrarSeccion('agregarMaestroSection')">Agregar Maestro</button></li>
+        <li><button onclick="mostrarSeccion('agregarAsignaturaSection')">Agregar Asignatura</button></li>
+        <li><button onclick="mostrarSeccion('agregarCarreraSection')">Agregar Carrera</button></li>
+ 
+        <li><button onclick="mostrarSeccion('listadoRegistrosSection')">Listado de Registros</button></li>
+      </ul>
+    </nav>
+
+
+    <main class="main-content">
+    
+      <section id="nuevoRegistroSection">
+        <h2>Nuevo Registro</h2>
+        <form id="registroForm">
+       
+          <label for="selectAsignatura">Asignatura:</label>
+          <select id="selectAsignatura" required>
+            <option value="">Seleccione Asignatura</option>
+          </select>
+
+         
+          <label for="selectCarrera">Familia de Carrera:</label>
+          <select id="selectCarrera" required>
+            <option value="">Seleccione Carrera</option>
+          </select>
+
+         
+          <label for="selectCuatrimestre">Cuatrimestre:</label>
+          <select id="selectCuatrimestre" required>
+            <option value="">Seleccione Cuatrimestre</option>
+            <option value="1er">1er</option>
+            <option value="2do">2do</option>
+            <option value="3er">3er</option>
+            <option value="4to">4to</option>
+            <option value="5to">5to</option>
+            <option value="6to">6to</option>
+            <option value="7mo">7mo</option>
+            <option value="8vo">8vo</option>
+            <option value="9no">9no</option>
+          </select>
+
+         
+          <label for="selectUnidades">Número de UAs:</label>
+          <select id="selectUnidades" required>
+            <option value="">Seleccione # UAs</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+
+  
+          <label for="textareaCompetencia">Nivel de Competencia:</label>
+          <textarea id="textareaCompetencia" rows="2" required></textarea>
+
+   
+          <label for="textareaObjetivo">Objetivo General de la Asignatura:</label>
+          <textarea id="textareaObjetivo" rows="2" required></textarea>
+
+
+          <div id="unidadesContainer"></div>
+
+          
+          <button type="submit">Guardar Registro</button>
+        </form>
+      </section>
+
+  
+      <section id="agregarMaestroSection" style="display:none;">
+        <h2>Agregar Maestro</h2>
+        <form id="formMaestro">
+          <label for="maestroNombre">Nombre del Maestro:</label>
+          <input type="text" id="maestroNombre" required />
+          <button type="submit">Guardar Maestro</button>
+        </form>
+      </section>
+
+    
+      <section id="agregarAsignaturaSection" style="display:none;">
+        <h2>Agregar Asignatura</h2>
+        <form id="formAsignatura">
+          <label for="asignaturaNombre">Nombre de la Asignatura:</label>
+          <input type="text" id="asignaturaNombre" required />
+
+          <label for="asignaturaDuracion">Duración (horas):</label>
+          <input type="number" id="asignaturaDuracion" required />
+
+          <!-- Seleccionar un profesor existente -->
+          <label for="selectProfesor">Profesor:</label>
+          <select id="selectProfesor" required>
+            <option value="">Seleccione Profesor</option>
+          </select>
+
+          <button type="submit">Guardar Asignatura</button>
+        </form>
+      </section>
+
+    
+      <section id="agregarCarreraSection" style="display:none;">
+        <h2>Agregar Carrera</h2>
+        <form id="formCarrera">
+          <label for="carreraNombre">Nombre de la Carrera/Familia:</label>
+          <input type="text" id="carreraNombre" required />
+          <button type="submit">Guardar Carrera</button>
+        </form>
+      </section>
+
+      <!-- registros -->
+      <section id="listadoRegistrosSection" style="display:none;">
+        <h2>Listado de Registros</h2>
+        <table id="tablaRegistros">
+          <thead>
+            <tr>
+              <th>Cuatrimestre</th>
+              <th>Asignatura</th>
+              <th>Objetivo General</th>
+              <th>Número de Semanas</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- await de js -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- modaless -->
+  <div id="modalDetalles" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <div id="detallesContenido"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

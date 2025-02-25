@@ -1,0 +1,160 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+
+.container {
+  display: flex;
+}
+
+
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ccc;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+}
+
+.sidebar button:hover {
+  background-color: #ccc;
+}
+
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+select, textarea, input[type="text"], input[type="number"] {
+  width: 50%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+
+#tablaRegistros {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border: 1px solid #999;
+}
+
+#tablaRegistros th, #tablaRegistros td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #999;
+}
+
+
+.unidad-block {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Estilos para el modals */
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 999; 
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; 
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: black;
+}
+
+.header-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+.header-table td {
+  border: 1px solid #999;
+  padding: 5px;
+  vertical-align: top;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.details-table th,
+.details-table td {
+  border: 1px solid #999;
+  padding: 6px;
+  text-align: left;
+}
+
+.details-table thead tr:first-child th {
+  text-align: center;
+}
